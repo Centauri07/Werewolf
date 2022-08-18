@@ -6,7 +6,7 @@ import me.centauri07.werewolf.api.manager.GameManager
 /**
  * @author Centauri07
  */
-object WerewolfGameManager: GameManager<WerewolfPlayer, WerewolfTeam> {
+class WerewolfGameManager: GameManager<WerewolfPlayer, WerewolfTeam> {
 
     private val games: MutableMap<String, Game<WerewolfPlayer, WerewolfTeam>> = mutableMapOf()
 
@@ -14,11 +14,12 @@ object WerewolfGameManager: GameManager<WerewolfPlayer, WerewolfTeam> {
         TODO("Not yet implemented")
     }
 
-    override fun getGame(identifier: String): Game<WerewolfPlayer, WerewolfTeam> {
+    override fun getGame(identifier: String): Game<WerewolfPlayer, WerewolfTeam>? {
         TODO("Not yet implemented")
     }
 
-    override fun getGame(player: WerewolfPlayer): Game<WerewolfPlayer, WerewolfTeam> {
+    override fun getGame(player: WerewolfPlayer): Game<WerewolfPlayer, WerewolfTeam>? {
         TODO("Not yet implemented")
     }
+
 }

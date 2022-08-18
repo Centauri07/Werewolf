@@ -27,7 +27,7 @@ interface GameManager<P: Player, T: Team<P>> {
 
     fun createGame(): Game<P, T>
 
-    fun getGame(identifier: String): Game<P, T>
-    fun getGame(player: P): Game<P, T>
+    fun getGame(identifier: String): Game<P, T>?
+    fun getGame(player: P): Game<P, T>?
 
 }
