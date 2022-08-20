@@ -36,7 +36,7 @@ interface Game<P: Player, T: Team<P>> {
 
     fun getTeams(): List<T>
 
-    fun getTeamOfPlayer(player: P)
+    fun getTeamOfPlayer(player: P): T?
 
     fun initialize()
     fun end()
