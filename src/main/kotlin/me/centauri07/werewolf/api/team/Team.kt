@@ -23,6 +23,10 @@ import me.centauri07.werewolf.api.player.Player
  */
 interface Team<P: Player> {
 
+    val name: String
+
+    val capacity: Int
+
     fun addPlayer(player: P)
     fun removePlayer(player: P)
 
