@@ -16,6 +16,7 @@
 
 package me.centauri07.werewolf.api.game
 
+import me.centauri07.werewolf.api.phase.Phase
 import me.centauri07.werewolf.api.player.Player
 import me.centauri07.werewolf.api.team.Team
 
@@ -25,6 +26,8 @@ import me.centauri07.werewolf.api.team.Team
 interface Game<P: Player, T: Team<P>> {
 
     val identifier: String
+
+    val phase: Phase<P, T>?
 
     fun getPlayers(): List<P>
 
