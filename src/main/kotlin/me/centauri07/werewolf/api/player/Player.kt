@@ -21,6 +21,8 @@ package me.centauri07.werewolf.api.player
  */
 interface Player {
 
+    val id: Long
+
     var gameIdentifier: String
 
     var state: PlayerState
