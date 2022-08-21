@@ -24,6 +24,8 @@ import me.centauri07.werewolf.api.team.Team
  */
 interface Phase<P: Player, T: Team<P>> {
 
+    val nextPhase: Phase<P, T>?
+
     fun initialize()
     fun end()
 
