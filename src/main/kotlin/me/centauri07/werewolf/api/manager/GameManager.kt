@@ -17,6 +17,7 @@
 package me.centauri07.werewolf.api.manager
 
 import me.centauri07.werewolf.api.game.Game
+import me.centauri07.werewolf.api.lobby.Lobby
 import me.centauri07.werewolf.api.player.Player
 import me.centauri07.werewolf.api.team.Team
 
@@ -25,9 +26,13 @@ import me.centauri07.werewolf.api.team.Team
  */
 interface GameManager<P: Player, T: Team<P>> {
 
-    fun createGame(): Game<P, T>
+    fun createLobby(): Lobby
+
+    fun createGame(lobby: Lobby): Game<P, T>
 
     fun getGame(identifier: String): Game<P, T>?
     fun getGame(player: P): Game<P, T>?
+
+    fun getPlayer(id: Long): P
 
 }
