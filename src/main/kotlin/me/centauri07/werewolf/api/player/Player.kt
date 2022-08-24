@@ -16,15 +16,19 @@
 
 package me.centauri07.werewolf.api.player
 
+import net.dv8tion.jda.api.entities.Member
+
 /**
  * @author Centauri07
  */
 interface Player {
 
-    val id: Long
+    val member: Member
 
     var gameIdentifier: String
 
     var state: PlayerState
+
+    var connection: PlayerConnection
 
 }
