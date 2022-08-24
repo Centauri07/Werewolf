@@ -21,6 +21,6 @@ package me.centauri07.werewolf.api.player
  */
 enum class PlayerState {
 
-    ALIVE, SPECTATING
+    ALIVE, ELIMINATED
 
 }
