@@ -27,15 +27,16 @@ interface Game<P: Player, T: Team<P>> {
 
     val identifier: String
 
-    val phase: Phase<P, T>?
+    var phase: Phase<P, T>?
 
     fun getPlayers(): List<P>
 
-    fun addPlayer(player: P)
-    fun removePlayer(player: P)
+    fun disconnect(player: P)
+
+    fun eliminate(player: P)
+    fun revive(player: P)
 
     fun getAlivePlayers(): List<P>
-    fun getSpectatingPlayers(): List<P>
 
     fun getTeams(): List<T>
 
@@ -43,5 +44,7 @@ interface Game<P: Player, T: Team<P>> {
 
     fun initialize()
     fun end()
+
+    fun nextPhase()
 
 }
